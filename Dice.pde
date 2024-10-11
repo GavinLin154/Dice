@@ -1,13 +1,13 @@
 void setup() {
   noLoop();
   size(800, 800);
-  background(255,255,255);
+  background(255, 255, 255);
 }
 
 void draw()
 {
   int total = 0;
-  background(255,255,255);
+  background(255, 255, 255);
   for (int i = 50; i < 750; i += 95) {
     for (int j = 100; j < 800; j += 100) {
       Die one = new Die(j, i);
@@ -29,6 +29,7 @@ class Die //models one single dice cube
 {
   //member variable declarations here
   int rollNum, myX, myY;
+  double za;
 
   Die(int x, int y) //constructor
   {
@@ -42,11 +43,16 @@ class Die //models one single dice cube
   }
   void show()
   {
+    za = Math.random();
     if (rollNum == 1) {
-      stroke(255,0,0);
+      stroke(255, 0, 0);
       strokeJoin(ROUND);
       strokeWeight(50);
-      stroke(0,255,0);
+      if (za > .6)
+        stroke(0, 255, 0);
+      else if (za > .3)
+        stroke(#71A95A);
+      else stroke(#007944);
       beginShape();
       vertex(myX - 19, myY - 19);
       vertex(myX + 19, myY - 19);
@@ -54,7 +60,11 @@ class Die //models one single dice cube
       vertex(myX - 19, myY + 19);
       vertex(myX - 19, myY - 19);
       endShape();
-      stroke(253,70,89);
+      if (za > .6)
+        stroke(253, 70, 89);
+      else if (za > .3)
+        stroke(#e687a2);
+      else stroke(#FD4659);
       beginShape();
       vertex(myX - 15, myY - 15);
       vertex(myX + 15, myY - 15);
@@ -68,10 +78,14 @@ class Die //models one single dice cube
       fill(0);
       ellipse(myX, myY, 10, 10);
     } else if (rollNum == 2) {
-      stroke(255,0,0);
+      stroke(255, 0, 0);
       strokeJoin(ROUND);
       strokeWeight(50);
-      stroke(0,255,0);
+      if (za > .6)
+        stroke(0, 255, 0);
+      else if (za > .3)
+        stroke(#71A95A);
+      else stroke(#007944);
       beginShape();
       vertex(myX - 19, myY - 19);
       vertex(myX + 19, myY - 19);
@@ -79,7 +93,11 @@ class Die //models one single dice cube
       vertex(myX - 19, myY + 19);
       vertex(myX - 19, myY - 19);
       endShape();
-      stroke(253,70,89);
+      if (za > .6)
+        stroke(253, 70, 89);
+      else if (za > .3)
+        stroke(#e687a2);
+      else stroke(#FD4659);
       beginShape();
       vertex(myX - 15, myY - 15);
       vertex(myX + 15, myY - 15);
@@ -94,10 +112,14 @@ class Die //models one single dice cube
       ellipse(myX + 12.5, myY - 12.5, 10, 10);
       ellipse(myX - 12.5, myY + 12.5, 10, 10);
     } else if (rollNum == 3) {
-      stroke(255,0,0);
+      stroke(255, 0, 0);
       strokeJoin(ROUND);
       strokeWeight(50);
-      stroke(0,255,0);
+      if (za > .6)
+        stroke(0, 255, 0);
+      else if (za > .3)
+        stroke(#71A95A);
+      else stroke(#007944);
       beginShape();
       vertex(myX - 19, myY - 19);
       vertex(myX + 19, myY - 19);
@@ -105,7 +127,11 @@ class Die //models one single dice cube
       vertex(myX - 19, myY + 19);
       vertex(myX - 19, myY - 19);
       endShape();
-      stroke(253,70,89);
+      if (za > .6)
+        stroke(253, 70, 89);
+      else if (za > .3)
+        stroke(#e687a2);
+      else stroke(#FD4659);
       beginShape();
       vertex(myX - 15, myY - 15);
       vertex(myX + 15, myY - 15);
@@ -121,10 +147,14 @@ class Die //models one single dice cube
       ellipse(myX-12.5, myY+14.5, 10, 10);
       ellipse(myX+13.5, myY-15.5, 10, 10);
     } else if (rollNum == 4) {
-      stroke(255,0,0);
+      stroke(255, 0, 0);
       strokeJoin(ROUND);
       strokeWeight(50);
-      stroke(0,255,0);
+      if (za > .6)
+        stroke(0, 255, 0);
+      else if (za > .3)
+        stroke(#71A95A);
+      else stroke(#007944);
       beginShape();
       vertex(myX - 19, myY - 19);
       vertex(myX + 19, myY - 19);
@@ -132,7 +162,11 @@ class Die //models one single dice cube
       vertex(myX - 19, myY + 19);
       vertex(myX - 19, myY - 19);
       endShape();
-      stroke(253,70,89);
+      if (za > .6)
+        stroke(253, 70, 89);
+      else if (za > .3)
+        stroke(#e687a2);
+      else stroke(#FD4659);
       beginShape();
       vertex(myX - 15, myY - 15);
       vertex(myX + 15, myY - 15);
@@ -149,10 +183,14 @@ class Die //models one single dice cube
       ellipse(myX-11.5, myY+12.5, 10, 10);
       ellipse(myX+11.5, myY+12.5, 10, 10);
     } else if (rollNum == 5) {
-      stroke(255,0,0);
+      stroke(255, 0, 0);
       strokeJoin(ROUND);
       strokeWeight(50);
-      stroke(0,255,0);
+      if (za > .6)
+        stroke(0, 255, 0);
+      else if (za > .3)
+        stroke(#71A95A);
+      else stroke(#007944);
       beginShape();
       vertex(myX - 19, myY - 19);
       vertex(myX + 19, myY - 19);
@@ -160,7 +198,11 @@ class Die //models one single dice cube
       vertex(myX - 19, myY + 19);
       vertex(myX - 19, myY - 19);
       endShape();
-      stroke(253,70,89);
+      if (za > .6)
+        stroke(253, 70, 89);
+      else if (za > .3)
+        stroke(#e687a2);
+      else stroke(#FD4659);
       beginShape();
       vertex(myX - 15, myY - 15);
       vertex(myX + 15, myY - 15);
@@ -178,10 +220,14 @@ class Die //models one single dice cube
       ellipse(myX-13.5, myY+14.5, 10, 10);
       ellipse(myX+13.5, myY+14.5, 10, 10);
     } else if (rollNum == 6) {
-      stroke(255,0,0);
+      stroke(255, 0, 0);
       strokeJoin(ROUND);
       strokeWeight(50);
-      stroke(0,255,0);
+      if (za > .6)
+        stroke(0, 255, 0);
+      else if (za > .3)
+        stroke(#71A95A);
+      else stroke(#007944);
       beginShape();
       vertex(myX - 19, myY - 19);
       vertex(myX + 19, myY - 19);
@@ -189,7 +235,11 @@ class Die //models one single dice cube
       vertex(myX - 19, myY + 19);
       vertex(myX - 19, myY - 19);
       endShape();
-      stroke(253,70,89);
+      if (za > .6)
+        stroke(253, 70, 89);
+      else if (za > .3)
+        stroke(#e687a2);
+      else stroke(#FD4659);
       beginShape();
       vertex(myX - 15, myY - 15);
       vertex(myX + 15, myY - 15);
